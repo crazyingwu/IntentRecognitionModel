@@ -30,7 +30,7 @@ class Processor:
     @classmethod
     def get_examples(cls, path, set_type):
         raw_examples = []
-        with open(path, 'r') as fp:
+        with open(path, 'r', encoding="UTF-8") as fp:
             data = eval(fp.read())
         for i, d in enumerate(data):
             text = d['text']

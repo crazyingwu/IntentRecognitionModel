@@ -3,12 +3,12 @@ class Args:
     test_path = './data/test_process.json'
     seq_labels_path = './data/intents.txt'
     token_labels_path = './data/slots.txt'
-    bert_dir = '../../model_hub/chinese-bert-wwm-ext/'
+    bert_dir = './chinese-bert-wwm-ext/'
     save_dir = './checkpoints/'
     load_dir = './checkpoints/model.pt'
     do_train = False
     do_eval = False
-    do_test = True
+    do_test = False
     do_save = True
     do_predict = True
     load_model = True

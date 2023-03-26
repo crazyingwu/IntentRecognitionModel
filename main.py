@@ -211,7 +211,7 @@ if __name__ == '__main__':
         trainer.test(test_loader)
 
     if args.do_predict:
-        with open('./data/test.json','r') as fp:
+        with open('./data/test.json','r', encoding="UTF-8") as fp:
             pred_data = eval(fp.read())
             for i,p_data in enumerate(pred_data):
                 text = p_data['text']
