@@ -1,0 +1,149 @@
+[
+    {
+      "text": "查一下广告单2652862的数据",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "2652862"
+      }
+    },
+    {
+      "text": "查一下广告位90000001的数据",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "90000001"
+      }
+    },
+    {
+      "text": "查一下DSP 10101的数据",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "10101"
+      }
+    },
+    {
+      "text": "给出广告单2652862的数据",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "2652862"
+      }
+    },
+    {
+      "text": "给出广告位90000001的数据",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "90000001"
+      }
+    },
+    {
+      "text": "给出DSP 10101的数据",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "10101"
+      }
+    },
+    {
+      "text": "广告单2652862的数据",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "2652862"
+      }
+    },
+    {
+      "text": "广告位90000001的数据",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "90000001"
+      }
+    },
+    {
+      "text": "DSP 10101的数据",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "10101"
+      }
+    },
+    {
+      "text": "查询广告单2652862",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "2652862"
+      }
+    },
+    {
+      "text": "查询广告位90000001",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "90000001"
+      }
+    },
+    {
+      "text": "查询DSP 10101",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "10101"
+      }
+    },
+    {
+      "text": "广告单2652862的数据是多少",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "2652862"
+      }
+    },
+    {
+      "text": "广告位90000001的数据是多少",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "90000001"
+      }
+    },
+    {
+      "text": "DSP10101的数据是多少",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "10101"
+      }
+    },
+    {
+      "text": "2652862号广告单的数据",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "2652862"
+      }
+    },
+    {
+      "text": "80000004广告位的信息",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "80000004"
+      }
+    },
+    {
+      "text": "10872dsp的数据",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "10872"
+      }
+    },
+    {
+      "text": "查询广告单3726264",
+      "intent": "REDIS_AD",
+      "slots": {
+        "adId": "3726264"
+      }
+    },
+    {
+      "text": "广告位870002的信息",
+      "intent": "REDIS_FLIGHT",
+      "slots": {
+        "flightId": "870002"
+      }
+    },
+    {
+      "text": "看下dsp27898的数据",
+      "intent": "REDIS_DSP",
+      "slots": {
+        "dspId": "27898"
+      }
+    }
+]

@@ -167,9 +167,27 @@ class Trainer:
             seq_output = seq_output[0]
             token_output = token_output[0][1:len(text)-1]
             token_output = [self.config.id2nerlabel[i] for i in token_output]
-            print('意图：', self.config.id2seqlabel[seq_output])
-            print('槽位：', str([(i[0],text[i[1]:i[2]+1], i[1], i[2]) for i in get_entities(token_output)]))
+            # print('意图：', self.config.id2seqlabel[seq_output])
+            # print('槽位：', str([(i[0],text[i[1]:i[2]+1], i[1], i[2]) for i in get_entities(token_output)]))
 
+            res_intent = self.config.id2seqlabel[seq_output]
+            res_slot = str([(i[0],text[i[1]:i[2]+1], i[1], i[2]) for i in get_entities(token_output)])
+            slot_value = [text[i[1]:i[2]+1] for i in get_entities(token_output)][0]
+            print('意图: ', res_intent)
+            print('槽位: ', res_slot)
+            handleIntent(res_intent, slot_value)
+
+
+
+def handleIntent(intent, slot):
+    if intent == 'REDIS_AD':
+        print('执行Redis命令: get adindex:ad:{}'.format(slot))
+    elif intent == 'REDIS_FLIGHT':
+        print('执行命令Redis: get adflight:ad:{}'.format(slot))
+    elif intent == 'REDIS_DSP':
+        print('执行命令Redis: get addsp:ad:{}'.format(slot))
+    else:
+        print('未能识别到您的意图，建议给出更详细的信息')
 
 if __name__ == '__main__':
     args = Args()
@@ -211,12 +229,12 @@ if __name__ == '__main__':
         trainer.test(test_loader)
 
     if args.do_predict:
-        with open('./data/test.json','r', encoding="UTF-8") as fp:
+        with open('./newdata/my_test.json','r', encoding="UTF-8") as fp:
             pred_data = eval(fp.read())
             for i,p_data in enumerate(pred_data):
                 text = p_data['text']
                 print('=================================')
-                print(text)
+                print("输入命令: ",text)
                 trainer.predict(text)
                 print('=================================')
                 if i == 10:

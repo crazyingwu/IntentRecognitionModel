@@ -1,17 +1,17 @@
 class Args:
-    train_path = './data/train_process.json'
-    test_path = './data/test_process.json'
-    seq_labels_path = './data/intents.txt'
-    token_labels_path = './data/slots.txt'
+    train_path = './newdata/my_train.json'
+    test_path = './newdata/my_test.json'
+    seq_labels_path = './newdata/intents.txt'
+    token_labels_path = './newdata/slots.txt'
     bert_dir = './chinese-bert-wwm-ext/'
     save_dir = './checkpoints/'
     load_dir = './checkpoints/model.pt'
-    do_train = False
+    do_train = True
     do_eval = False
     do_test = False
-    do_save = True
+    do_save = False
     do_predict = True
-    load_model = True
+    load_model = False
     device = None
     seqlabel2id = {}
     id2seqlabel = {}
@@ -47,7 +47,7 @@ class Args:
     max_len = 32
     batchsize = 64
     lr = 2e-5
-    epoch = 10
+    epoch = 200
     hidden_dropout_prob = 0.1
 
 if __name__ == '__main__':
